@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import breakpoints from "../../config/breakpoints";
-import {colors} from"../../config/colors"
+import { colors } from "../../config/colors";
 import { Link } from "react-router-dom";
 export const NavBar = styled.nav`
   height: 60px;
@@ -27,7 +27,7 @@ export const Logo = styled.div`
     font-size: 20px;
   }
 `;
-export const AlbaniaTitle = styled.span`
+export const SecondGrid = styled.span`
   color: ${colors.cyan};
   font-size: 19px;
   &:hover {

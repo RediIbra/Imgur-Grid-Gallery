@@ -7,7 +7,7 @@ import {
   Logo,
   NavElements,
   NavLink,
-  AlbaniaTitle,
+  SecondGrid,
   LogoLink,
   ArrowIcon,
   DropdownMenu,
@@ -16,6 +16,7 @@ import {
 } from "./Header.style";
 
 import ArrowDropDownCircleIcon from "@mui/icons-material/ArrowDropDownCircle";
+
 import { useEffect } from "react";
 import { useRef } from "react";
 function Header() {
@@ -34,15 +35,15 @@ function Header() {
     return () => {
       document.removeEventListener("mousedown", handler);
     };
-  })
+  });
 
   return (
     <NavBar>
       <Container>
         <LogoLink to="/dashboard">
           <Logo>
-            Enjoy
-            <AlbaniaTitle>Albania</AlbaniaTitle>
+            Photo
+            <SecondGrid>Grid</SecondGrid>
           </Logo>
         </LogoLink>
         <NavElements>
@@ -71,9 +72,7 @@ function Header() {
                   </DropdownListItem>
                   <DropdownListItem>
                     <MenuLink>
-                      <NavLink>
-                        Log out
-                      </NavLink>
+                      <NavLink>Log out</NavLink>
                     </MenuLink>
                   </DropdownListItem>
                 </DropdownUnorderedList>
