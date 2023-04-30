@@ -68,52 +68,35 @@ export const NavLink = styled(Link)`
     color: ${colors.cyan};
   }
 `;
-export const LogoLink = styled(Link)`
+
+export const SelectSectionSpan = styled.span`
+  color: ${colors.cyan};
+  font-family: "Poppins";
+`;
+export const SelectBar = styled.select`
+  margin: 0 5px 0 5px;
+  background-color: ${colors.dark};
   color: ${colors.snow};
-  font-weight: 500;
-  text-decoration: none;
-  &:hover {
-    color: ${colors.cyan};
+  font-size: 16px;
+  border: none;
+  font-family: "Poppins";
+  &:focus {
+    outline: none;
   }
 `;
-export const MenuIcon = styled.div`
-  display: none;
-  @media (max-width: ${breakpoints.md}) {
-    display: block;
-    cursor: pointer;
-    color: ${colors.snow};
-  }
+export const Option = styled.option`
+  margin-left: 40px;
 `;
-export const ArrowIcon = styled.div`
-  margin-right: 20px;
-  margin-top: 9px;
-  cursor: pointer;
-  &:hover {
-    color: ${colors.cyan};
-  }
-  @media (max-width: ${breakpoints.md}) {
-    margin-right: 0;
-    margin-top: 0;
-  }
+
+export const GallerySpec = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
-export const DropdownMenu = styled.div`
-  position: absolute;
-  right: 0;
-  z-index: 10;
-  border-radius: 10px;
-  background: ${colors.dark};
-  &.active {
-    display: none;
-  }
+export const ViralLable = styled.label`
+  font-family: "Poppins";
+  color: ${colors.cyan};
 `;
-export const DropdownUnorderedList = styled.ul`
-  margin: 10px;
-  padding: 0;
-  list-style: none;
-`;
-export const DropdownListItem = styled.div`
-  width: 150px;
-  padding: 10px;
-  font-size: 18px;
-  color: ${colors.snow};
-`;
+
+export const ViralCheckbox = styled.input``;
