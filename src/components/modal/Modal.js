@@ -1,5 +1,4 @@
 import React from "react";
-import "./modal.css";
 import {
   Overlay,
   ModalContainer,
@@ -21,7 +20,7 @@ import RemoveRedEyeTwoToneIcon from "@mui/icons-material/RemoveRedEyeTwoTone";
 import ScoreboardTwoToneIcon from "@mui/icons-material/ScoreboardTwoTone";
 const Modal = ({ open, onClose, info }) => {
   const showImg = (img) => {
-    if (img.split(".")[3] == "mp4") {
+    if (img.split(".")[3] === "mp4") {
       return notFound;
     } else {
       return img;

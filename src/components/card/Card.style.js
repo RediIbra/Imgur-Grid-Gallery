@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import breakpoints from "../../config/breakpoints";
-import { colors } from "../../config/colors";
-import { Link } from "react-router-dom";
+// import breakpoints from "../../config/breakpoints";
+// import { colors } from "../../config/colors";
+// import { Link } from "react-router-dom";
 export const CardTemplate = styled.div`
   display: flex;
   flex-direction: column;
@@ -12,6 +12,16 @@ export const CardTemplate = styled.div`
   transition: transform 0.2s ease-in-out;
   &:hover {
     transform: scale(1.05);
+  }
+  animation: fade-in 0.3s ease-in-out forwards;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 `;
 

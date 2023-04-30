@@ -20,7 +20,7 @@ function Header(props) {
   const [day, setDay] = useState("day");
   const [showViral, setShowViral] = useState(true);
   const [dispable, setDisable] = useState(false);
-  const [disableButton, setDisableButton] = useState(false);
+  const [disableButton] = useState(false);
   const state = useSelector((state) => state.urlCall);
   const getUserFilter = () => {
     props.getUrlInfos({
@@ -43,7 +43,7 @@ function Header(props) {
     <NavBar>
       <Container>
         <Logo onClick={() => window.location.reload()}>
-          Photo
+          Imgur
           <SecondGrid>Grid</SecondGrid>
         </Logo>
         <GallerySpec>

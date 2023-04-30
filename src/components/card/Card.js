@@ -1,14 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import {
   CardTemplate,
   Image,
   CardContent,
   TextContent,
   Paragraph,
-  ModalTitle,
-  ModalContent,
-  CloseModalButton,
-  ModalDes,
 } from "./Card.style";
 import "../../index.css";
 import loadingGif from "../../assets/Loading_icon.gif";
@@ -17,7 +13,7 @@ import { useSelector } from "react-redux";
 
 function Card(props) {
   const [photoLoaded, setPhotoLoaded] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal] = useState(false);
   const state = useSelector((state) => state.urlCall);
   const modalInfo = props.extraInfo;
   useEffect(() => {
@@ -25,7 +21,7 @@ function Card(props) {
   }, [state.loading, openModal]);
 
   const showImg = (img) => {
-    if (img.split(".")[3] == "mp4") {
+    if (img.split(".")[3] === "mp4") {
       return notFound;
     } else {
       return img;
@@ -52,7 +48,7 @@ function Card(props) {
       )}
       <CardContent>
         <TextContent>{props.title}</TextContent>
-        {props.description && <Paragraph>{props.description}</Paragraph>}
+        <Paragraph>{props.description}</Paragraph>
       </CardContent>
     </CardTemplate>
   );
