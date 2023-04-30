@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import breakpoints from "../../config/breakpoints";
+import breakpoints from "../../config/breakpoints";
 // import { colors } from "../../config/colors";
 // import { Link } from "react-router-dom";
 export const CardTemplate = styled.div`
@@ -9,12 +9,13 @@ export const CardTemplate = styled.div`
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  height: 350px;
   transition: transform 0.2s ease-in-out;
   &:hover {
     transform: scale(1.05);
   }
   animation: fade-in 0.3s ease-in-out forwards;
-
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -23,14 +24,24 @@ export const CardTemplate = styled.div`
       opacity: 1;
     }
   }
+  @media (max-width: ${breakpoints.md}) {
+    width: 150px;
+    height: 250px;
+  }
+  @media (max-width: ${breakpoints.sm}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const Image = styled.img`
   display: block;
   width: 100%;
   height: 250px;
-  width: 200px;
   cursor: pointer;
+  @media (max-width: ${breakpoints.md}) {
+    width: 150px;
+    height: 250px;
+  }
 `;
 
 export const CardContent = styled.div`
@@ -39,7 +50,6 @@ export const CardContent = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: auto;
-  width: 200px;
 `;
 
 export const TextContent = styled.h2`
@@ -50,6 +60,9 @@ export const TextContent = styled.h2`
   text-overflow: ellipsis;
   white-space: nowrap;
   height: 30px;
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 14px;
+  }
 `;
 export const Paragraph = styled.p`
   margin: 8px 0;
@@ -59,6 +72,9 @@ export const Paragraph = styled.p`
   text-overflow: ellipsis;
   white-space: nowrap;
   height: 50px;
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 12px;
+  }
 `;
 export const ModalContent = styled.div`
   position: absolute;

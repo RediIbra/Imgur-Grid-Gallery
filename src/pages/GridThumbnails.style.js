@@ -6,7 +6,11 @@ export const GridThumbnailsContainer = styled.div`
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
   margin: 20px;
+  overflow-x: scroll;
   @media (max-width: ${breakpoints.md}) {
     grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: ${breakpoints.sm}) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;

@@ -8,11 +8,12 @@ export const NavBar = styled.nav`
   position: sticky;
   top: 0;
   z-index: 1;
+  width: 100%;
 `;
 
 export const Container = styled.div`
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,12 +27,18 @@ export const Logo = styled.div`
   &:hover {
     font-size: 20px;
   }
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 12px;
+  }
 `;
 export const SecondGrid = styled.span`
   color: ${colors.cyan};
   font-size: 19px;
   &:hover {
     font-size: 20px;
+  }
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 12px;
   }
 `;
 export const NavElements = styled.div``;
@@ -83,6 +90,9 @@ export const SelectBar = styled.select`
   &:focus {
     outline: none;
   }
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 10px;
+  }
 `;
 export const Option = styled.option`
   margin-left: 40px;
@@ -93,6 +103,9 @@ export const GallerySpec = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 10px;
+  }
 `;
 export const ViralLable = styled.label`
   font-family: "Poppins";
@@ -101,7 +114,7 @@ export const ViralLable = styled.label`
 
 export const ViralCheckbox = styled.input``;
 export const ButtonSubmit = styled.button`
-  margin-right: 20px;
+  margin-right: 10px;
   background-color: ${colors.cyan};
   border: none;
   padding: 4px 4px;
@@ -117,5 +130,8 @@ export const ButtonSubmit = styled.button`
   }
   &:disabled {
     background-color: ${colors.grey};
+  }
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 10px;
   }
 `;

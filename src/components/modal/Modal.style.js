@@ -29,6 +29,10 @@ export const ModalContainer = styled.div`
       opacity: 1;
     }
   }
+  @media (max-width: ${breakpoints.md}) {
+    width: 80vw;
+    height: 50vh;
+  }
 `;
 
 export const ModalPhoto = styled.img`
@@ -36,6 +40,9 @@ export const ModalPhoto = styled.img`
   width: 250px;
   object-fit: cover;
   border-radius: 20px;
+  @media (max-width: ${breakpoints.md}) {
+    width: 40vw;
+  }
 `;
 export const ModalRight = styled.div`
   width: 100%;
@@ -64,10 +71,25 @@ export const Content = styled.div`
   text-align: center;
   padding: 16px 32px;
 `;
-export const Title = styled.h1``;
-export const Description = styled.h1``;
-
-export const Score = styled.p``;
-export const Upvotes = styled.p``;
-export const Downvotes = styled.p``;
-export const Views = styled.p``;
+export const Title = styled.h1`
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 14px;
+  }
+`;
+export const Description = styled.h1`
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 14px;
+  }
+`;
+export const Score = styled.p`
+  color: green;
+`;
+export const Upvotes = styled.p`
+  color: darkblue;
+`;
+export const Downvotes = styled.p`
+  color: red;
+`;
+export const Views = styled.p`
+  color: black;
+`;

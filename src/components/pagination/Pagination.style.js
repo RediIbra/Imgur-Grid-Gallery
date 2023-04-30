@@ -5,6 +5,7 @@ export const PaginationList = styled.nav`
   flex-direction: row;
   justify-content: center;
   margin-top: 20px;
+  overflow-x: scroll;
 `;
 export const PaginationButtons = styled.button`
   text-decoration: none;
