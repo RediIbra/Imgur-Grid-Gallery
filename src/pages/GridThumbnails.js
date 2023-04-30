@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
-import Card from "../components/card/Card";
-import { GridThumbnailsContainer } from "./GridThumbnails.style";
-import Header from "../components/header/Header";
-import Pagination from "../components/pagination/Pagination";
-import { useDispatch, useSelector } from "react-redux";
-import { urlRequest } from "../redux/apiCalls/urlCallActions";
-import Modal from "../components/modal/Modal";
-
+import React, { useState, useEffect } from 'react';
+import Card from '../components/card/Card';
+import { GridThumbnailsContainer } from './GridThumbnails.style';
+import Header from '../components/header/Header';
+import Pagination from '../components/pagination/Pagination';
+import { useDispatch, useSelector } from 'react-redux';
+import { urlRequest } from '../redux/apiCalls/urlCallActions';
+import Modal from '../components/modal/Modal';
 function GridThumbnails() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state.urlCall);
@@ -17,9 +16,9 @@ function GridThumbnails() {
   const [modalInfo, setModalInfo] = useState({});
   console.log(modalInfo);
   const postsPerPage = 10;
-  const url = `https://api.imgur.com/3/gallery/${urlConfig.section ?? "hot"}/${
-    urlConfig.sort ?? "viral"
-  }/${urlConfig.window ?? "day"}/1?showViral=${
+  const url = `https://api.imgur.com/3/gallery/${urlConfig.section ?? 'hot'}/${
+    urlConfig.sort ?? 'viral'
+  }/${urlConfig.window ?? 'day'}/1?showViral=${
     urlConfig.showViral ?? true
   }&mature=false&album_previews=false`;
 
@@ -41,14 +40,14 @@ function GridThumbnails() {
           <Card
             key={card.id}
             title={card.title}
-            imageSrc={card.images ? card.images["0"].link : card.link}
+            imageSrc={card.images ? card.images['0'].link : card.link}
             description={card?.description}
             extraInfo={{
               upvotes: card.ups,
               downvotes: card.downs,
               score: card.score,
               views: card.views,
-              photoUrl: card.images ? card.images["0"].link : card.link,
+              photoUrl: card.images ? card.images['0'].link : card.link,
               title: card.title,
               description: card.description,
             }}

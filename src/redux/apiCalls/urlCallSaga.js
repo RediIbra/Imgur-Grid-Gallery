@@ -1,6 +1,6 @@
-import axios from "axios";
-import { put, takeLatest } from "redux-saga/effects";
-import { urlSuccededFetch, urlFailed } from "./urlCallActions";
+import axios from 'axios';
+import { put, takeLatest } from 'redux-saga/effects';
+import { urlSuccededFetch, urlFailed } from './urlCallActions';
 
 const apiFetch = async (url) => {
   try {
@@ -33,7 +33,7 @@ function* urlRequest(url) {
 }
 
 function* urlCallSaga() {
-  yield takeLatest("urlRequest/apiRequest", urlRequest);
+  yield takeLatest('urlRequest/apiRequest', urlRequest);
 }
 
 export default urlCallSaga;

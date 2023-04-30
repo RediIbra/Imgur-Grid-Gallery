@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import {
   CardTemplate,
   Image,
   CardContent,
   TextContent,
   Paragraph,
-} from "./Card.style";
-import "../../index.css";
-import loadingGif from "../../assets/Loading_icon.gif";
-import notFound from "../../assets/img-notFound.webp";
-import { useSelector } from "react-redux";
+} from './Card.style';
+import '../../index.css';
+import loadingGif from '../../assets/Loading_icon.gif';
+import notFound from '../../assets/img-notFound.webp';
+import { useSelector } from 'react-redux';
 
 function Card(props) {
   const [photoLoaded, setPhotoLoaded] = useState(false);
@@ -18,10 +18,10 @@ function Card(props) {
   const modalInfo = props.extraInfo;
   useEffect(() => {
     if (!state.loading) setPhotoLoaded(true);
-  }, [state.loading, openModal]);
+  }, [state.loading]);
 
   const showImg = (img) => {
-    if (img.split(".")[3] === "mp4") {
+    if (img.split('.')[3] === 'mp4') {
       return notFound;
     } else {
       return img;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import breakpoints from "../../config/breakpoints";
 // import { colors } from "../../config/colors";
-// import { Link } from "react-router-dom";
+
 export const CardTemplate = styled.div`
   display: flex;
   flex-direction: column;

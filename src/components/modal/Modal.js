@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Overlay,
   ModalContainer,
@@ -12,15 +12,15 @@ import {
   Upvotes,
   Downvotes,
   Views,
-} from "./Modal.style";
-import notFound from "../../assets/img-notFound.webp";
-import ThumbUpOffAltTwoToneIcon from "@mui/icons-material/ThumbUpOffAltTwoTone";
-import ThumbDownTwoToneIcon from "@mui/icons-material/ThumbDownTwoTone";
-import RemoveRedEyeTwoToneIcon from "@mui/icons-material/RemoveRedEyeTwoTone";
-import ScoreboardTwoToneIcon from "@mui/icons-material/ScoreboardTwoTone";
+} from './Modal.style';
+import notFound from '../../assets/img-notFound.webp';
+import ThumbUpOffAltTwoToneIcon from '@mui/icons-material/ThumbUpOffAltTwoTone';
+import ThumbDownTwoToneIcon from '@mui/icons-material/ThumbDownTwoTone';
+import RemoveRedEyeTwoToneIcon from '@mui/icons-material/RemoveRedEyeTwoTone';
+import ScoreboardTwoToneIcon from '@mui/icons-material/ScoreboardTwoTone';
 const Modal = ({ open, onClose, info }) => {
   const showImg = (img) => {
-    if (img.split(".")[3] === "mp4") {
+    if (img.split('.')[3] === 'mp4') {
       return notFound;
     } else {
       return img;

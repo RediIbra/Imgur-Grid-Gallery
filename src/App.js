@@ -1,4 +1,4 @@
-import GridThumbnails from "./pages/GridThumbnails";
+import GridThumbnails from './pages/GridThumbnails';
 
 function App() {
   return (
