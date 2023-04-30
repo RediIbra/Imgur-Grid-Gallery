@@ -1,19 +1,28 @@
 import axios from "axios";
 import { put, takeLatest } from "redux-saga/effects";
-import { urlSucceded, urlFailed } from "./urlCallActions";
+import { urlSuccededFetch, urlFailed } from "./urlCallActions";
 
-const logInFunction = async ({ payload }) => {
-  const response = await axios.post(
-    "http://192.168.10.94:8080/enjoyAlbania/auth/login"
-  );
-  console.log(response);
+const apiFetch = async (url) => {
+  try {
+    const gallery = await axios.get(url, {
+      headers: {
+        Authorization: `Bearer 5aa0c39cb53066c5fbe393794b17c08f4499cba8`,
+      },
+    });
+    return {
+      gallery,
+    };
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-function* urlCall({ payload }) {
+function* urlRequest(url) {
   try {
-    const response = yield logInFunction(payload);
-    if (response.statusCode) {
-      yield put(urlSucceded(response.user));
+    const response = yield apiFetch(url.payload);
+    if (response.gallery.data) {
+      console.log(response.gallery.data.data);
+      yield put(urlSuccededFetch(response.gallery.data.data));
     } else {
       yield put(urlFailed(response));
       console.log(response);
@@ -23,8 +32,8 @@ function* urlCall({ payload }) {
   }
 }
 
-function* loginSaga() {
-  yield takeLatest("urlCall/urlCallRequest", urlCall);
+function* urlCallSaga() {
+  yield takeLatest("urlRequest/apiRequest", urlRequest);
 }
 
-export default loginSaga;
+export default urlCallSaga;

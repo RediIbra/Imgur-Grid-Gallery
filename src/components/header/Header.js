@@ -12,13 +12,16 @@ import {
   ViralCheckbox,
   ButtonSubmit,
 } from "./Header.style";
+import { useSelector } from "react-redux";
 
 function Header(props) {
   const [section, setSection] = useState("hot");
   const [sort, setSort] = useState("viral");
   const [day, setDay] = useState("day");
   const [showViral, setShowViral] = useState(true);
-
+  const [dispable, setDisable] = useState(false);
+  const [disableButton, setDisableButton] = useState(false);
+  const state = useSelector((state) => state.urlCall);
   const getUserFilter = () => {
     props.getUrlInfos({
       section: section,
@@ -29,7 +32,12 @@ function Header(props) {
   };
   useEffect(() => {
     getUserFilter();
-  }, []);
+    if (state.loading === false) {
+      setDisable(false);
+    } else {
+      setDisable(true);
+    }
+  }, [state.loading]);
 
   return (
     <NavBar>
@@ -39,13 +47,19 @@ function Header(props) {
           <SecondGrid>Grid</SecondGrid>
         </Logo>
         <GallerySpec>
-          <ButtonSubmit onClick={getUserFilter}>Show Photos</ButtonSubmit>
+          <ButtonSubmit
+            disabled={disableButton || dispable}
+            onClick={getUserFilter}
+          >
+            Show Photos
+          </ButtonSubmit>
           <SelectSectionSpan>Select Section:</SelectSectionSpan>
           <SelectBar
             value={section}
             onChange={(e) => {
               setSection(e.target.value);
             }}
+            disabled={dispable}
           >
             <Option value="hot">Hot</Option>
             <Option value="top">Top</Option>
@@ -57,6 +71,7 @@ function Header(props) {
             onChange={(e) => {
               setSort(e.target.value);
             }}
+            disabled={dispable}
           >
             <Option value="viral">Viral</Option>
             <Option value="top">Top</Option>
@@ -68,6 +83,7 @@ function Header(props) {
             onChange={(e) => {
               setDay(e.target.value);
             }}
+            disabled={dispable}
           >
             <Option value="day">Day</Option>
             <Option value="week">Week</Option>
@@ -82,6 +98,7 @@ function Header(props) {
               type="checkbox"
               checked={showViral}
               onChange={(e) => setShowViral(e.target.checked)}
+              disabled={dispable}
             />
           </ViralLable>
         </GallerySpec>

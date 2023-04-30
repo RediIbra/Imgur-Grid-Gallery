@@ -1,13 +1,13 @@
 import { apiRequest, apiSuccess, apiFailure } from "./urlCallReducer";
 
 export const urlRequest = (values) => ({
-  type: apiRequest,
+  type: apiRequest.type,
   payload: values,
 });
 
-export const urlSucceded = (user) => ({
+export const urlSuccededFetch = (values) => ({
   type: apiSuccess.type,
-  payload: user,
+  payload: values,
 });
 
 export const urlFailed = (error) => ({

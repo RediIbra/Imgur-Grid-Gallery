@@ -8,50 +8,52 @@ import {
   ModalTitle,
   ModalContent,
   CloseModalButton,
-  Modal,
   ModalDes,
 } from "./Card.style";
 import "../../index.css";
+import loadingGif from "../../assets/Loading_icon.gif";
+import notFound from "../../assets/img-notFound.webp";
+import { useSelector } from "react-redux";
+
 function Card(props) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const formRef = useRef(null);
-  const handleImageClick = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+  const [photoLoaded, setPhotoLoaded] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const state = useSelector((state) => state.urlCall);
+  const modalInfo = props.extraInfo;
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (formRef.current && !formRef.current.contains(event.target)) {
-        setIsModalOpen(false);
-      } else {
-        setIsModalOpen(true);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
+    if (!state.loading) setPhotoLoaded(true);
+  }, [state.loading, openModal]);
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [formRef]);
+  const showImg = (img) => {
+    if (img.split(".")[3] == "mp4") {
+      return notFound;
+    } else {
+      return img;
+    }
+  };
+  const openNewModal = () => {
+    props.getModal(!openModal);
+    props.imgInfo(modalInfo);
+  };
   return (
-    <CardTemplate ref={formRef}>
-      <Image src={props.imageSrc} alt="Card image" onClick={handleImageClick} />
+    <CardTemplate>
+      {photoLoaded ? (
+        <Image
+          src={showImg(props.imageSrc)}
+          onClick={() => {
+            openNewModal();
+          }}
+          alt="Card image"
+        />
+      ) : (
+        <div id="loading-gif">
+          <Image src={loadingGif} alt="Loading..." />
+        </div>
+      )}
       <CardContent>
         <TextContent>{props.title}</TextContent>
-        <Paragraph>{props.description}</Paragraph>
+        {props.description && <Paragraph>{props.description}</Paragraph>}
       </CardContent>
-      {isModalOpen && (
-        <Modal>
-          <ModalContent>
-            <ModalTitle>{props.title}</ModalTitle>
-            <ModalDes>{props.description}</ModalDes>
-            <CloseModalButton onClick={handleCloseModal}>X</CloseModalButton>
-          </ModalContent>
-        </Modal>
-      )}
     </CardTemplate>
   );
 }

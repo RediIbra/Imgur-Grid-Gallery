@@ -115,4 +115,7 @@ export const ButtonSubmit = styled.button`
   &:hover {
     background-color: #3e8e41;
   }
+  &:disabled {
+    background-color: ${colors.grey};
+  }
 `;

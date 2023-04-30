@@ -36,15 +36,19 @@ export const TextContent = styled.h2`
   margin-top: 10px;
   font-size: 1.2rem;
   font-weight: bold;
-  height: 50px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 30px;
 `;
 export const Paragraph = styled.p`
   margin: 8px 0;
   font-size: 1rem;
   line-height: 1.2;
-  height: 40px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 50px;
 `;
 export const ModalContent = styled.div`
   position: absolute;

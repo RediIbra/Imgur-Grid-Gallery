@@ -4,10 +4,11 @@ const initialState = {
   loading: false,
   error: null,
   status: "",
+  data: [],
 };
 
 const apiSlice = createSlice({
-  name: "apiCall",
+  name: "urlRequest",
   initialState,
   reducers: {
     apiRequest: (state) => {
@@ -15,8 +16,7 @@ const apiSlice = createSlice({
     },
     apiSuccess: (state, { payload }) => {
       state.loading = false;
-      state.user = payload;
-      state.error = "";
+      state.data = payload;
     },
     apiFailure: (state, { payload }) => {
       state.loading = false;
