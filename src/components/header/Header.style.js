@@ -100,3 +100,19 @@ export const ViralLable = styled.label`
 `;
 
 export const ViralCheckbox = styled.input``;
+export const ButtonSubmit = styled.button`
+  margin-right: 20px;
+  background-color: ${colors.cyan};
+  border: none;
+  padding: 4px 4px;
+  color: ${colors.snow};
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: #3e8e41;
+  }
+`;

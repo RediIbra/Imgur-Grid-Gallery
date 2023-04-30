@@ -10,6 +10,7 @@ import {
   SelectSectionSpan,
   ViralLable,
   ViralCheckbox,
+  ButtonSubmit,
 } from "./Header.style";
 
 function Header(props) {
@@ -33,12 +34,12 @@ function Header(props) {
   return (
     <NavBar>
       <Container>
-        <Logo>
+        <Logo onClick={() => window.location.reload()}>
           Photo
           <SecondGrid>Grid</SecondGrid>
         </Logo>
         <GallerySpec>
-          <button>Show Photos</button>
+          <ButtonSubmit onClick={getUserFilter}>Show Photos</ButtonSubmit>
           <SelectSectionSpan>Select Section:</SelectSectionSpan>
           <SelectBar
             value={section}

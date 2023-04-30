@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import breakpoints from "../config/breakpoints";
-import { colors } from "../config/colors";
 
 export const GridThumbnailsContainer = styled.div`
   display: grid;
