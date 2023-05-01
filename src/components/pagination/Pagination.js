@@ -12,7 +12,6 @@ function Pagination({ pages, setCurrentPage }) {
   const [arrOfCurrButtons, setArrOfCurrButtons] = useState([]);
 
   useEffect(() => {
-    console.log(pages);
     let tempNumberOfPages = [...arrOfCurrButtons];
     let dotsInitial = '...';
     let dotsLeft = '... ';
@@ -22,7 +21,6 @@ function Pagination({ pages, setCurrentPage }) {
     } else if (currentButton >= 1 && currentButton <= 3) {
       tempNumberOfPages = [1, 2, 3, 4, dotsInitial, numberOfPages.length];
     } else if (currentButton === 4) {
-      console.log('go here 3', currentButton === 4);
       const sliced = numberOfPages.slice(0, 5);
       tempNumberOfPages = [...sliced, dotsInitial, numberOfPages.length];
     } else if (currentButton > 4 && currentButton < numberOfPages.length - 2) {
