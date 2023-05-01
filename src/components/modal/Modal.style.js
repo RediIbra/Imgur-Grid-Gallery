@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import breakpoints from "../../config/breakpoints";
-import { colors } from "../../config/colors";
+import styled from 'styled-components';
+import breakpoints from '../../config/breakpoints';
+import { colors } from '../../config/colors';
 
 export const Overlay = styled.div`
   position: fixed;
@@ -12,7 +12,7 @@ export const ModalContainer = styled.div`
   width: 800px;
   height: 500px;
   position: fixed;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -38,7 +38,7 @@ export const ModalContainer = styled.div`
 export const ModalPhoto = styled.img`
   padding: 8px;
   width: 250px;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 20px;
   @media (max-width: ${breakpoints.md}) {
     width: 40vw;

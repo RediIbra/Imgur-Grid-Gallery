@@ -14,7 +14,6 @@ function GridThumbnails() {
   const [currentPage, setCurrentPage] = useState(1);
   const [openModal, setOpenModal] = useState(false);
   const [modalInfo, setModalInfo] = useState({});
-  console.log(modalInfo);
   const postsPerPage = 10;
   const url = `https://api.imgur.com/3/gallery/${urlConfig.section ?? 'hot'}/${
     urlConfig.sort ?? 'viral'
@@ -30,8 +29,7 @@ function GridThumbnails() {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = galleryData.slice(indexOfFirstPost, indexOfLastPost);
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const howManyPages = Math.ceil(galleryData.length / postsPerPage);
   return (
     <>
       <Header getUrlInfos={setUrlConfig} />
@@ -56,11 +54,7 @@ function GridThumbnails() {
           />
         ))}
       </GridThumbnailsContainer>
-      <Pagination
-        postsPerPage={postsPerPage}
-        totalPosts={galleryData.length}
-        paginate={paginate}
-      />
+      <Pagination pages={howManyPages} setCurrentPage={setCurrentPage} />
       <Modal
         open={openModal}
         info={modalInfo}

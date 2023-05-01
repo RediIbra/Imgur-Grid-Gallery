@@ -1,19 +1,34 @@
-import styled from "styled-components";
-import { colors } from "../../config/colors";
-export const PaginationList = styled.nav`
+import styled from 'styled-components';
+import { colors } from '../../config/colors';
+export const PaginationContainer = styled.nav`
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  margin-top: 20px;
-  overflow-x: scroll;
+  align-items: center;
+  width: 100%;
+  font-weight: 500;
+  font-size: 15px;
 `;
 export const PaginationButtons = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  height: 40px;
+  width: 40px;
   text-decoration: none;
-  padding: 5px 10px;
+  transition: background-color 0.2s;
   border: 1px solid #ddd;
-  margin: 0 5px;
+  cursor: pointer;
 
-  &:hover {
-    background-color: ${colors.grey};
+  &:active {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #7cbddb;
+  }
+  &:disabled {
+    opacity: 0.2;
+  }
+  &:a:hover:not(.active) {
+    background-color: rgb(238, 238, 238);
   }
 `;

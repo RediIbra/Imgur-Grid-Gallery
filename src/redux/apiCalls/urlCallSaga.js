@@ -21,7 +21,6 @@ function* urlRequest(url) {
   try {
     const response = yield apiFetch(url.payload);
     if (response.gallery.data) {
-      console.log(response.gallery.data.data);
       yield put(urlSuccededFetch(response.gallery.data.data));
     } else {
       yield put(urlFailed(response));
