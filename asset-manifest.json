@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/CodingChallenge-teachaway/static/css/main.b4d2047e.css",
-    "main.js": "/CodingChallenge-teachaway/static/js/main.b3d14b96.js",
+    "main.js": "/CodingChallenge-teachaway/static/js/main.e8b4c1b9.js",
     "static/media/img-notFound.webp": "/CodingChallenge-teachaway/static/media/img-notFound.9b82276c5760c55b592e.webp",
     "static/media/Loading_icon.gif": "/CodingChallenge-teachaway/static/media/Loading_icon.1a32f552ee5280e2aef9.gif",
     "index.html": "/CodingChallenge-teachaway/index.html",
     "main.b4d2047e.css.map": "/CodingChallenge-teachaway/static/css/main.b4d2047e.css.map",
-    "main.b3d14b96.js.map": "/CodingChallenge-teachaway/static/js/main.b3d14b96.js.map"
+    "main.e8b4c1b9.js.map": "/CodingChallenge-teachaway/static/js/main.e8b4c1b9.js.map"
   },
   "entrypoints": [
     "static/css/main.b4d2047e.css",
-    "static/js/main.b3d14b96.js"
+    "static/js/main.e8b4c1b9.js"
   ]
 }
