@@ -78,6 +78,7 @@ export const Title = styled.h1`
 `;
 export const Description = styled.h1`
   @media (max-width: ${breakpoints.md}) {
+    height: 100px;
     font-size: 14px;
   }
 `;
