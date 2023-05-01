@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import breakpoints from "../../config/breakpoints";
+import styled from 'styled-components';
+import breakpoints from '../../config/breakpoints';
 // import { colors } from "../../config/colors";
 
 export const CardTemplate = styled.div`
@@ -40,7 +40,7 @@ export const Image = styled.img`
   cursor: pointer;
   @media (max-width: ${breakpoints.md}) {
     width: 150px;
-    height: 250px;
+    height: 150px;
   }
 `;
 

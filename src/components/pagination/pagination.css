@@ -23,7 +23,7 @@
 }
 
 .pagination-container a.active {
-  background-color: #007bff;
+  background-color: #00cc88;
   color: white;
   border: 1px solid #7cbddb;
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './pagination.css';
-// import { PaginationContainer, PaginationButtons } from './Pagination.style';
+
 function Pagination({ pages, setCurrentPage }) {
   let numberOfPages = [];
 
