@@ -1,6 +1,8 @@
 import GridThumbnails from './pages/GridThumbnails';
 
 function App() {
+  
+  
   return (
     <>
       <GridThumbnails />

@@ -38,8 +38,8 @@ const Modal = ({ open, onClose, info }) => {
         <ModalRight>
           <XButton onClick={onClose}>X</XButton>
           <Content>
-            <Title>{info.title}</Title>
-            <Description>{info.description}</Description>
+            {info.title && <Title>{info.title}</Title>}
+            {info.description && <Description>{info.description}</Description>}
             <Score>
               Score:{info.score}
               <ScoreboardTwoToneIcon />
