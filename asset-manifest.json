@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/CodingChallenge-teachaway/static/css/main.b4d2047e.css",
-    "main.js": "/CodingChallenge-teachaway/static/js/main.37d15ff4.js",
+    "main.css": "/CodingChallenge-teachaway/static/css/main.27d41bf1.css",
+    "main.js": "/CodingChallenge-teachaway/static/js/main.b5d76962.js",
     "static/media/img-notFound.webp": "/CodingChallenge-teachaway/static/media/img-notFound.9b82276c5760c55b592e.webp",
     "static/media/Loading_icon.gif": "/CodingChallenge-teachaway/static/media/Loading_icon.1a32f552ee5280e2aef9.gif",
     "index.html": "/CodingChallenge-teachaway/index.html",
-    "main.b4d2047e.css.map": "/CodingChallenge-teachaway/static/css/main.b4d2047e.css.map",
-    "main.37d15ff4.js.map": "/CodingChallenge-teachaway/static/js/main.37d15ff4.js.map"
+    "main.27d41bf1.css.map": "/CodingChallenge-teachaway/static/css/main.27d41bf1.css.map",
+    "main.b5d76962.js.map": "/CodingChallenge-teachaway/static/js/main.b5d76962.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4d2047e.css",
-    "static/js/main.37d15ff4.js"
+    "static/css/main.27d41bf1.css",
+    "static/js/main.b5d76962.js"
   ]
 }
