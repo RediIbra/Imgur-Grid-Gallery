@@ -15,7 +15,7 @@ function GridThumbnails() {
   const [currentPage, setCurrentPage] = useState(1);
   const [openModal, setOpenModal] = useState(false);
   const [modalInfo, setModalInfo] = useState({});
-  const postsPerPage = 10;
+  const postsPerPage = 12;
   const url = `https://api.imgur.com/3/gallery/${urlConfig.section ?? 'hot'}/${
     urlConfig.sort ?? 'viral'
   }/${urlConfig.window ?? 'day'}/1?showViral=${
