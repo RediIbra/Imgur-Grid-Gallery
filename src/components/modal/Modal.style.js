@@ -30,18 +30,20 @@ export const ModalContainer = styled.div`
     }
   }
   @media (max-width: ${breakpoints.md}) {
-    width: 80vw;
-    height: 50vh;
+    width: 100%;
+    /* height: 50vh; */
   }
 `;
 
 export const ModalPhoto = styled.img`
   padding: 8px;
-  width: 250px;
-  object-fit: fill;
+  width: 100%;
+  object-fit: contain;
   border-radius: 20px;
+
+  max-width: 550px;
   @media (max-width: ${breakpoints.md}) {
-    width: 40vw;
+    width: 50%;
   }
 `;
 export const ModalRight = styled.div`
@@ -60,8 +62,8 @@ export const XButton = styled.p`
     color: ${colors.grey};
   }
   position: fixed;
-  top: 8px;
-  right: 8px;
+  top: 0;
+  right: 25px;
 `;
 
 export const Content = styled.div`
@@ -70,6 +72,7 @@ export const Content = styled.div`
   justify-content: center;
   text-align: center;
   padding: 16px 32px;
+  margin-top: 35px;
 `;
 export const Title = styled.h1`
   @media (max-width: ${breakpoints.md}) {
@@ -77,9 +80,9 @@ export const Title = styled.h1`
   }
 `;
 export const Description = styled.h1`
+  overflow: scroll;
   @media (max-width: ${breakpoints.md}) {
-    height: 100px;
-    font-size: 14px;
+    font-size: 12px;
   }
 `;
 export const Score = styled.p`

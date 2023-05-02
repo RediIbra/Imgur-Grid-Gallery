@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 import breakpoints from '../../config/breakpoints';
 // import { colors } from "../../config/colors";
-
 export const CardTemplate = styled.div`
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  width: 200px;
-  height: 350px;
+  width: 70%;
+  height: 275px;
   transition: transform 0.2s ease-in-out;
+  margin: auto;
   &:hover {
     transform: scale(1.05);
   }
@@ -25,25 +25,21 @@ export const CardTemplate = styled.div`
     }
   }
   @media (max-width: ${breakpoints.md}) {
-    width: 150px;
-    height: 250px;
+    // width: 150px;
+    // height: 250px;
+    margin: auto;
   }
-  @media (max-width: ${breakpoints.sm}) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  // @media (max-width: ${breakpoints.sm}) {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
 `;
-
 export const Image = styled.img`
   display: block;
   width: 100%;
-  height: 250px;
+  height: 70%;
   cursor: pointer;
-  @media (max-width: ${breakpoints.md}) {
-    width: 150px;
-    height: 150px;
-  }
+  object-fit: contain;
 `;
-
 export const CardContent = styled.div`
   flex: 1;
   display: flex;
@@ -51,7 +47,6 @@ export const CardContent = styled.div`
   justify-content: space-between;
   height: auto;
 `;
-
 export const TextContent = styled.h2`
   margin-top: 10px;
   font-size: 1.2rem;
@@ -59,7 +54,7 @@ export const TextContent = styled.h2`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  height: 30px;
+  margin: 5px;
   @media (max-width: ${breakpoints.md}) {
     font-size: 14px;
   }
@@ -71,7 +66,7 @@ export const Paragraph = styled.p`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  height: 50px;
+  margin: 5px;
   @media (max-width: ${breakpoints.md}) {
     font-size: 12px;
   }
@@ -94,7 +89,6 @@ export const CloseModalButton = styled.button`
   right: 10px;
   padding: 5px 7px;
 `;
-
 export const Modal = styled.div`
   background: rgba(49, 49, 49, 0.8);
   width: 100%;
@@ -102,7 +96,6 @@ export const Modal = styled.div`
   position: relative;
   z-index: 3;
 `;
-
 export const ModalTitle = styled.h1`
   font-size: 16px;
   font-weight: 900;

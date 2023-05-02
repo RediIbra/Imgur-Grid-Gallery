@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import breakpoints from "../../config/breakpoints";
-import { colors } from "../../config/colors";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import breakpoints from '../../config/breakpoints';
+import { colors } from '../../config/colors';
+import { Link } from 'react-router-dom';
 export const NavBar = styled.nav`
   height: 60px;
   background-color: ${colors.dark};
@@ -22,13 +22,13 @@ export const Container = styled.div`
 export const Logo = styled.div`
   color: ${colors.snow};
   font-size: 19px;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   padding-left: 5px;
   &:hover {
     font-size: 20px;
   }
   @media (max-width: ${breakpoints.md}) {
-    font-size: 12px;
+    font-size: 16px;
   }
 `;
 export const SecondGrid = styled.span`
@@ -38,7 +38,7 @@ export const SecondGrid = styled.span`
     font-size: 20px;
   }
   @media (max-width: ${breakpoints.md}) {
-    font-size: 12px;
+    font-size: 16px;
   }
 `;
 export const NavElements = styled.div``;
@@ -58,7 +58,7 @@ export const UnorderedList = styled.ul`
 export const MenuLink = styled.div`
   align-items: center;
   color: ${colors.snow};
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   position: relative;
 
   @media (max-width: ${breakpoints.md}) {
@@ -78,7 +78,11 @@ export const NavLink = styled(Link)`
 
 export const SelectSectionSpan = styled.span`
   color: ${colors.cyan};
-  font-family: "Poppins";
+  font-family: 'Poppins';
+
+  @media (max-width: ${breakpoints.md}) {
+    display: none;
+  }
 `;
 export const SelectBar = styled.select`
   margin: 0 5px 0 5px;
@@ -86,7 +90,7 @@ export const SelectBar = styled.select`
   color: ${colors.snow};
   font-size: 16px;
   border: none;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   &:focus {
     outline: none;
   }
@@ -108,7 +112,7 @@ export const GallerySpec = styled.div`
   }
 `;
 export const ViralLable = styled.label`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   color: ${colors.cyan};
 `;
 
@@ -133,5 +137,8 @@ export const ButtonSubmit = styled.button`
   }
   @media (max-width: ${breakpoints.md}) {
     font-size: 10px;
+    margin-right: 0px;
+    width: 50px;
+    height: 30px;
   }
 `;

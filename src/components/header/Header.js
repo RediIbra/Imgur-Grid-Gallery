@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import {
   Container,
   NavBar,
@@ -11,13 +11,13 @@ import {
   ViralLable,
   ViralCheckbox,
   ButtonSubmit,
-} from "./Header.style";
-import { useSelector } from "react-redux";
+} from './Header.style';
+import { useSelector } from 'react-redux';
 
 function Header(props) {
-  const [section, setSection] = useState("hot");
-  const [sort, setSort] = useState("viral");
-  const [day, setDay] = useState("day");
+  const [section, setSection] = useState('hot');
+  const [sort, setSort] = useState('viral');
+  const [day, setDay] = useState('day');
   const [showViral, setShowViral] = useState(true);
   const [dispable, setDisable] = useState(false);
   const [disableButton] = useState(false);
