@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/CodingChallenge-teachaway/static/css/main.27d41bf1.css",
-    "main.js": "/CodingChallenge-teachaway/static/js/main.c947c919.js",
-    "static/media/img-notFound.webp": "/CodingChallenge-teachaway/static/media/img-notFound.9b82276c5760c55b592e.webp",
-    "static/media/Loading_icon.gif": "/CodingChallenge-teachaway/static/media/Loading_icon.1a32f552ee5280e2aef9.gif",
-    "index.html": "/CodingChallenge-teachaway/index.html",
-    "main.27d41bf1.css.map": "/CodingChallenge-teachaway/static/css/main.27d41bf1.css.map",
-    "main.c947c919.js.map": "/CodingChallenge-teachaway/static/js/main.c947c919.js.map"
+    "main.css": "/Imgur-Grid-Gallery/static/css/main.b4d2047e.css",
+    "main.js": "/Imgur-Grid-Gallery/static/js/main.73292f4c.js",
+    "static/media/img-notFound.webp": "/Imgur-Grid-Gallery/static/media/img-notFound.9b82276c5760c55b592e.webp",
+    "static/media/Loading_icon.gif": "/Imgur-Grid-Gallery/static/media/Loading_icon.1a32f552ee5280e2aef9.gif",
+    "index.html": "/Imgur-Grid-Gallery/index.html",
+    "main.b4d2047e.css.map": "/Imgur-Grid-Gallery/static/css/main.b4d2047e.css.map",
+    "main.73292f4c.js.map": "/Imgur-Grid-Gallery/static/js/main.73292f4c.js.map"
   },
   "entrypoints": [
-    "static/css/main.27d41bf1.css",
-    "static/js/main.c947c919.js"
+    "static/css/main.b4d2047e.css",
+    "static/js/main.73292f4c.js"
   ]
 }
