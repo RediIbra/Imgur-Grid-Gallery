@@ -4,11 +4,12 @@ import { urlSuccededFetch, urlFailed } from './urlCallActions';
 
 const apiFetch = async (url) => {
   try {
-    const gallery = await axios.get(url, {
+    const gallery = axios.get(url, {
       headers: {
         Authorization: `Bearer 5aa0c39cb53066c5fbe393794b17c08f4499cba8`,
       },
     });
+    console.log(gallery);
     return {
       gallery,
     };
