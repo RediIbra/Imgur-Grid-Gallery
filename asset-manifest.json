@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Imgur-Grid-Gallery/static/css/main.b4d2047e.css",
-    "main.js": "/Imgur-Grid-Gallery/static/js/main.73292f4c.js",
-    "static/media/img-notFound.webp": "/Imgur-Grid-Gallery/static/media/img-notFound.9b82276c5760c55b592e.webp",
-    "static/media/Loading_icon.gif": "/Imgur-Grid-Gallery/static/media/Loading_icon.1a32f552ee5280e2aef9.gif",
-    "index.html": "/Imgur-Grid-Gallery/index.html",
-    "main.b4d2047e.css.map": "/Imgur-Grid-Gallery/static/css/main.b4d2047e.css.map",
-    "main.73292f4c.js.map": "/Imgur-Grid-Gallery/static/js/main.73292f4c.js.map"
+    "main.css": "/Imgur-Grid-Photos/static/css/main.27d41bf1.css",
+    "main.js": "/Imgur-Grid-Photos/static/js/main.698fb483.js",
+    "static/media/img-notFound.webp": "/Imgur-Grid-Photos/static/media/img-notFound.9b82276c5760c55b592e.webp",
+    "static/media/Loading_icon.gif": "/Imgur-Grid-Photos/static/media/Loading_icon.1a32f552ee5280e2aef9.gif",
+    "index.html": "/Imgur-Grid-Photos/index.html",
+    "main.27d41bf1.css.map": "/Imgur-Grid-Photos/static/css/main.27d41bf1.css.map",
+    "main.698fb483.js.map": "/Imgur-Grid-Photos/static/js/main.698fb483.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4d2047e.css",
-    "static/js/main.73292f4c.js"
+    "static/css/main.27d41bf1.css",
+    "static/js/main.698fb483.js"
   ]
 }
