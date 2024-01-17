@@ -1,5 +1,4 @@
-Project is live at:https://rediibra.github.io/Imgur-Grid-Gallery/
-If the page will not show the images please reload the page until it shows them(api issue).
-If you want to start the project locally you need to enter the comand in terminal "npm start" then enter your IP url not "localhost" because api from Imgur Server will not allow you to fetch them. (ERROR 429)
-I created this project by using redux-saga for state menagment olso worked with props,for styling i used "styled components", for fetching api i used "axios" and for icons i used "MUI".I tryed to make it as UI friendly as possible also responsive.Used Jest and react-testing-library to test some of components(demo).As code liner i used Prettier olso you can see the configuration file.In this project i includet mp4 files and gif,but i decited to show them as "imagine not found" but i still show the informations about them.I deployed the website using the "gh-pages" from my github repository.
-
+The project is live at https://rediibra.github.io/Imgur-Grid-Gallery/.
+If the page will not show the images, please reload the page until it does (api issue).
+If you want to start the project locally, you need to enter the command in the terminal "npm start," then enter your IP url, not "localhost," because the API from Imgur Server will not allow you to fetch them. (ERROR 429)
+I created this project by using redux-saga for state management and also worked with props. For styling, I used "styled components," for fetching APIs, I used "axios," and for icons, I used "MUI." I used Jest and react-testing-library to test some of the components (demo). As a code liner, I used Prettier, and you can also see the configuration file. In this project, I includet mp4 files and gifs,but I chose to show them as "imagine not found," but I still showed the information about them.
